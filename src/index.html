@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Live Transcription</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 flex items-center justify-center h-screen">
+
+  <!-- Main container -->
+  <div id="app" class="bg-gray-800 text-white shadow-lg rounded-lg p-8 w-full max-w-lg">
+    
+    <!-- Title -->
+    <h1 class="text-2xl font-bold text-center mb-4">Live Transcription</h1>
+    
+    <!-- Status message -->
+    <div class="flex items-center justify-center">
+      <p id="status" class="text-sm font-medium bg-gray-700 px-3 py-1 rounded-full">Not Connected</p>
+      <div id="loader" class="loader ml-3 hidden"></div>
+    </div>
+    
+    <!-- Transcript box -->
+    <div class="mt-6 bg-gray-700 text-sm p-4 h-64 overflow-y-auto rounded-lg border border-gray-600" id="transcript">
+      <p class="text-gray-400">Start...</p>
+    </div>
+
+    <!-- Buttons for additional functionality -->
+    <div class="mt-4 flex justify-between">
+      <button id="clearTranscript" class="bg-red-500 text-white px-4 py-2 rounded">Clear Transcript</button>
+      <button id="toggleMic" class="bg-blue-500 text-white px-4 py-2 rounded">Block Microphone</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
